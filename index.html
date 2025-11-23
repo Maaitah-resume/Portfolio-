@@ -19,22 +19,81 @@
             border-radius: 15px;
             padding-bottom: 45px;
         }
+
+        /* ===================== HEADER ===================== */
+
         header {
             text-align: center;
-            padding: 50px 20px;
-            background: #0a192f;
+            padding: 90px 20px;
+            background: radial-gradient(circle at top, #0a192f, #020b16);
             color: #fff;
+            position: relative;
+            overflow: hidden;
         }
-        .profile-img {
-            width: 150px; height: 150px;
+
+        /* glowing circle behind */
+        header::before {
+            content: "";
+            position: absolute;
+            top: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 650px;
+            height: 650px;
+            background: rgba(100, 255, 218, 0.17);
+            filter: blur(160px);
             border-radius: 50%;
-            border: 4px solid #64ffda;
-            object-fit: cover;
+            z-index: 0;
         }
-        h1 { margin-top: 20px; font-size: 2.4em; }
-        .subtitle { color: #64ffda; font-size: 1.2em; margin-top: 5px; }
+
+        .profile-img {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            border: 6px solid #64ffda;
+            object-fit: cover;
+            z-index: 2;
+            position: relative;
+            box-shadow: 0 0 35px rgba(100, 255, 218, 0.5);
+        }
+
+        h1, .subtitle, header p {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            margin-top: 25px;
+            font-size: 2.6em;
+        }
+
+        .subtitle {
+            color: #64ffda;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        a.button {
+            background: #0a192f;
+            color: #64ffda;
+            padding: 10px 16px;
+            display: inline-block;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #64ffda;
+            margin-top: 20px;
+        }
+
+        a.button:hover {
+            background: #112240;
+        }
+
+        /* ===================== MAIN CONTENT ===================== */
 
         .content { padding: 40px; }
+
         h2 {
             border-left: 5px solid #64ffda;
             padding-left: 12px;
@@ -51,6 +110,8 @@
             margin-top: 20px;
         }
 
+        /* ===================== GRIDS ===================== */
+
         .projects-grid, .cert-grid, .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -65,6 +126,7 @@
             border: 2px solid #e2e8f0;
             transition: 0.3s;
         }
+
         .project-card:hover, .cert-card:hover, .skill-card:hover {
             transform: translateY(-5px);
             border-color: #64ffda;
@@ -76,17 +138,6 @@
             margin-bottom: 15px;
             border: 2px solid #ccc;
         }
-
-        a.button {
-            background: #0a192f;
-            color: #64ffda;
-            padding: 10px 16px;
-            display: inline-block;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a.button:hover { background: #112240; }
 
         footer {
             margin-top: 40px;
@@ -102,51 +153,61 @@
 
 <div class="container">
 
-    <!-- HEADER -->
+    <!-- ============================================================= -->
+    <!--                         HEADER                                -->
+    <!-- ============================================================= -->
+
     <header>
         <img src="https://raw.githubusercontent.com/Maaitah-resume/Portfolio-/main/assets/1761330649653.jpeg"
              class="profile-img">
+
         <h1>Mohammad Maaitah</h1>
         <p class="subtitle">AI Engineer | Data Scientist | Cloud Practitioner</p>
-        <p>
-            <a href="https://www.linkedin.com/in/mohammad-maaitah-2b0351390"
-               class="button" target="_blank">
-                LinkedIn Profile
-            </a>
-        </p>
+
+        <a href="https://www.linkedin.com/in/mohammad-maaitah-2b0351390"
+           class="button" target="_blank">
+            LinkedIn Profile
+        </a>
     </header>
+
+
+    <!-- ============================================================= -->
+    <!--                         ABOUT ME                              -->
+    <!-- ============================================================= -->
 
     <div class="content">
 
-        <!-- ABOUT ME -->
         <section class="section">
             <h2>About Me</h2>
             <div class="info-box">
-                <p style="font-size: 1.1em; line-height: 1.8;">
-                    I am an AI Engineer, Data Scientist, and Research Specialist passionate about solving real-world
-                    challenges with intelligent machine learning systems. My work focuses on deep learning, medical image
-                    analysis, cloud-based deployment, research-driven development, and model optimization.
+                <p style="font-size: 1.15em; line-height: 1.8;">
+                    I am an AI Engineer, Data Scientist, and Research Specialist dedicated to designing intelligent
+                    systems powered by deep learning, data-driven methodologies, and modern cloud technologies.
+                    I specialize in medical image analysis, computer vision, applied machine learning, and AI research.
 
                     <br><br>
-                    I have hands-on experience building advanced solutions, including leukemia cell segmentation using
-                    U-Net, MRI-based brain tumor classification, and scalable cloud AI systems. I enjoy transforming research
-                    concepts into deployable applications and continuously expanding my expertise in federated learning,
-                    cybersecurity AI, and distributed model training.
+                    My work blends <strong>practical engineering</strong> with <strongexperimental research</strong>, enabling me to build
+                    advanced systems such as automated leukemia segmentation (U-Net), MRI-based brain tumor classification,
+                    distributed learning workflows, and cloud-hosted AI applications.
 
                     <br><br>
-                    Currently studying Artificial Intelligence & Data Science at
-                    <strong>Hussein Technical University (HTU)</strong> — where I strengthen both my academic foundation
-                    and practical engineering experience.
+                    Currently, I am pursuing a degree in Artificial Intelligence & Data Science at
+                    <strong>Hussein Technical University (HTU)</strong>, where I continue advancing my skills in model
+                    development, optimization, and real-world AI deployment.
                 </p>
             </div>
         </section>
 
-        <!-- SKILLS -->
+
+        <!-- ============================================================= -->
+        <!--                         SKILLS                                -->
+        <!-- ============================================================= -->
+
         <section class="section">
             <h2>Skills Summary</h2>
 
             <div class="skills-grid">
-                
+
                 <div class="skill-card">
                     <h3>Programming Languages</h3>
                     <p>Python, Java, SQL</p>
@@ -169,41 +230,53 @@
 
                 <div class="skill-card">
                     <h3>Research Skills</h3>
-                    <p>Scientific Research, AI Experimentation, Data Modeling, Problem Framing</p>
+                    <p>AI Research, Experimentation, Data Modeling, Academic Writing</p>
                 </div>
 
                 <div class="skill-card">
                     <h3>Soft Skills</h3>
-                    <p>Project Management, Report Building, Leadership, Communication, Stakeholder Collaboration</p>
+                    <p>Project Management, Reporting, Leadership, Communication</p>
                 </div>
 
             </div>
         </section>
 
 
-        <!-- UPCOMING PROJECTS -->
+        <!-- ============================================================= -->
+        <!--                   UPCOMING PROJECTS                           -->
+        <!-- ============================================================= -->
+
         <section class="section">
             <h2>Upcoming Project</h2>
 
             <div class="info-box" style="background:#eef6ff;">
-                <h3 style="color:#0a192f;">Federated Learning-Based Intrusion Detection System (FD-IDS)</h3>
-                <p style="font-size:1.1em; line-height:1.7;">
-                    A cutting-edge cybersecurity research project combining <strong>federated learning</strong> with
-                    <strong>intrusion detection</strong> to create a decentralized, privacy-preserving defense system.
+                <h3 style="color:#0a192f;">⚡ Federated Learning-Based Intrusion Detection System (FD-IDS)</h3>
+
+                <p style="font-size:1.15em; line-height:1.8;">
+                    A next-generation cybersecurity AI project leveraging <strong>federated learning</strong> to build
+                    a privacy-preserving intrusion detection system that protects organizations without sharing raw data.
 
                     <br><br>
-                    The system enables multiple organizations to collaboratively train an AI model without sharing raw data —
-                    strengthening security, eliminating privacy concerns, and improving global threat detection.
+                    The system enables decentralized training across multiple clients using <strong>secure aggregation,
+                    encrypted gradients, and distributed model updates</strong> — delivering stronger detection accuracy
+                    while ensuring absolute data confidentiality.
 
                     <br><br>
-                    Built using:
-                    <strong>PyTorch Federated Framework, Secure Aggregation, Feature Engineering, Network Traffic Analysis</strong>.
+                    Technologies involved:
+                    <strong>PyTorch Federated, Secure Aggregation, Network Traffic Analysis, Model Optimization, Cloud Deployment</strong>.
+
+                    <br><br>
+                    This project pushes the boundaries of <strong>AI-driven cybersecurity</strong> and opens the door to
+                    collaborative learning between enterprises in a secure, ethical, and scalable way.
                 </p>
             </div>
         </section>
 
 
-        <!-- PROJECTS -->
+        <!-- ============================================================= -->
+        <!--                     FEATURED PROJECTS                          -->
+        <!-- ============================================================= -->
+
         <section class="section">
             <h2>Featured Projects</h2>
 
@@ -219,14 +292,20 @@
 
                 <div class="project-card">
                     <h3>Brain Tumor Classification</h3>
-                    <p>ML system for MRI-based tumor classification using CNNs.</p>
-                    <a class="button" href="https://www.kaggle.com/code/mohammadmaaitah5/notebookbe584930f4"
+                    <p>AI-driven MRI classification system based on CNN architectures.</p>
+                    <a class="button"
+                       href="https://www.kaggle.com/code/mohammadmaaitah5/notebookbe584930f4"
                        target="_blank">Open Project →</a>
                 </div>
+
             </div>
         </section>
 
-        <!-- CERTIFICATIONS -->
+
+        <!-- ============================================================= -->
+        <!--                     CERTIFICATIONS                             -->
+        <!-- ============================================================= -->
+
         <section class="section">
             <h2>Certifications</h2>
 
@@ -234,7 +313,8 @@
 
                 <!-- Nutanix -->
                 <div class="cert-card">
-                    <a href="https://www.credly.com/badges/afeccbb1-f71a-4e97-aa09-3896fa0599f3/public_url" target="_blank">
+                    <a href="https://www.credly.com/badges/afeccbb1-f71a-4e97-aa09-3896fa0599f3/public_url"
+                       target="_blank">
                         <img src="https://raw.githubusercontent.com/Maaitah-resume/Portfolio-/main/assets/c383558e-a4f4-482a-a0a2-a7f74a4f62a0.png"
                              class="cert-thumbnail">
                     </a>
@@ -251,9 +331,10 @@
                     <h3>Python Data Fundamentals – DataCamp</h3>
                 </div>
 
-                <!-- Udemy AWS -->
+                <!-- Udemy -->
                 <div class="cert-card">
-                    <a href="https://www.udemy.com/certificate/UC-5c90da11-7dfb-40e6-a9d9-c21d54346ac3" target="_blank">
+                    <a href="https://www.udemy.com/certificate/UC-5c90da11-7dfb-40e6-a9d9-c21d54346ac3"
+                       target="_blank">
                         <img src="https://raw.githubusercontent.com/Maaitah-resume/Portfolio-/main/assets/c2b7bd6e-296b-4562-b428-994bb91765e6.png"
                              class="cert-thumbnail">
                     </a>
@@ -263,7 +344,9 @@
             </div>
         </section>
 
-        <!-- CONTACT -->
+
+      
+
         <section class="section">
             <h2>Contact</h2>
             <div class="info-box">
