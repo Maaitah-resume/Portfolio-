@@ -7,8 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #0f2027;
-            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             margin: 0;
             padding: 0;
         }
@@ -16,7 +15,7 @@
             max-width: 1100px;
             margin: auto;
             background: #fff;
-            border-radius: 12px;
+            border-radius: 15px;
             padding-bottom: 40px;
         }
         header {
@@ -32,65 +31,60 @@
             border: 4px solid #64ffda;
             object-fit: cover;
         }
-        h1 {
-            margin-top: 20px;
-            font-size: 2.2em;
-        }
-        .subtitle {
-            color: #64ffda;
-            font-size: 1.2em;
-        }
-        .content {
-            padding: 30px 40px;
-        }
+        h1 { margin-top: 20px; font-size: 2.4em; }
+        .subtitle { color: #64ffda; font-size: 1.2em; margin-top: 5px; }
+
+        .content { padding: 40px; }
+
         h2 {
             border-left: 5px solid #64ffda;
-            padding-left: 10px;
-            font-size: 1.8em;
+            padding-left: 12px;
+            font-size: 1.9em;
         }
-        .cert-grid {
+
+        .section { margin-bottom: 50px; }
+
+        .projects-grid, .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 25px;
             margin-top: 20px;
         }
-        .cert-card {
-            background: #f5f7fa;
+
+        .project-card, .cert-card {
+            background: #f4f7fb;
             padding: 20px;
             border-radius: 12px;
-            text-align: center;
             border: 2px solid #e2e8f0;
             transition: 0.3s;
         }
-        .cert-card:hover {
+
+        .project-card:hover, .cert-card:hover {
             transform: translateY(-5px);
             border-color: #64ffda;
         }
-        .cert-preview {
+
+        .cert-thumbnail {
             width: 100%;
-            height: 180px;
-            background: #d9e2ec;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            font-weight: bold;
+            border-radius: 12px;
             margin-bottom: 15px;
+            border: 2px solid #ccc;
         }
-        .cert-link {
-            display: inline-block;
-            padding: 10px 18px;
-            border-radius: 6px;
-            text-decoration: none;
-            border: 2px solid #0a192f;
-            color: #0a192f;
-            font-weight: 600;
-        }
-        .cert-link:hover {
+
+        a.button {
             background: #0a192f;
             color: #64ffda;
+            padding: 10px 16px;
+            display: inline-block;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
         }
+
+        a.button:hover {
+            background: #112240;
+        }
+
         footer {
             margin-top: 40px;
             padding: 20px;
@@ -98,55 +92,98 @@
             text-align: center;
             color: #fff;
         }
+
     </style>
 </head>
 <body>
 
 <div class="container">
 
+    <!-- HEADER -->
     <header>
-        <!-- Your real profile photo -->
         <img src="https://raw.githubusercontent.com/Maaitah-resume/Portfolio-/main/assets/1761330649653.jpeg"
              class="profile-img">
         <h1>Mohammad Maaitah</h1>
         <p class="subtitle">AI Engineer | Data Scientist | Cloud Practitioner</p>
+        <p>
+            <a href="https://www.linkedin.com/in/mohammad-maaitah-2b0351390" class="button" target="_blank">
+                LinkedIn Profile
+            </a>
+        </p>
     </header>
 
     <div class="content">
 
-        <section>
+        <!-- ABOUT -->
+        <section class="section">
+            <h2>About Me</h2>
+            <p style="font-size: 1.1em; line-height: 1.7;">
+                I am an AI Engineer and Data Scientist specialized in deep learning, medical image analysis,
+                and cloud-based AI deployment. I enjoy building intelligent systems such as leukemia segmentation
+                using U-Net, brain tumor classification systems, and machine learning pipelines deployed on modern
+                cloud platforms. Passionate about learning, problem solving, and delivering meaningful solutions
+                using AI technologies.
+            </p>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section">
+            <h2>Featured Projects</h2>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <h3>Leukemia Segmentation (U-Net)</h3>
+                    <p>Deep learning segmentation model deployed on HuggingFace Spaces.</p>
+                    <a class="button" href="https://huggingface.co/spaces/Maaitah/Leukemia" target="_blank">
+                        Open Project →
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Brain Tumor Classification</h3>
+                    <p>ML model for MRI-based tumor classification developed using CNNs.</p>
+                    <a class="button" href="https://www.kaggle.com/code/mohammadmaaitah5/notebookbe584930f4"
+                       target="_blank">Open Project →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="section">
             <h2>Certifications</h2>
 
             <div class="cert-grid">
 
+                <!-- Nutanix -->
+                <div class="cert-card">
+                    <a href="https://www.credly.com/badges/afeccbb1-f71a-4e97-aa09-3896fa0599f3/public_url"
+                       target="_blank">
+                        <img src="https://raw.githubusercontent.com/Maaitah-resume/Portfolio-/main/assets/c383558e-a4f4-482a-a0a2-a7f74a4f62a0.png"
+                             class="cert-thumbnail">
+                    </a>
+                    <h3>Nutanix Certified Associate (NCA-6)</h3>
+                </div>
+
                 <!-- DataCamp -->
                 <div class="cert-card">
-                    <div class="cert-preview">
-                        Python Data Fundamentals
-                    </div>
-                    <h3>DataCamp Certificate</h3>
-                    <a href="https://raw.githubusercontent.com/Maaitah-resume/Portfolio-/main/assets/certificate.pdf"
-                       class="cert-link" target="_blank">View Certificate</a>
+                    <a href="https://www.datacamp.com/completed/statement-of-accomplishment/track/e418c15c307c3b5bded0be0edb8edc8ac50a6729"
+                       target="_blank">
+                        <img src="https://raw.githubusercontent.com/Maaitah-resume/Portfolio-/main/assets/176e6f8c-d5d9-4a1c-a9c7-46cfcb25e263.png"
+                             class="cert-thumbnail">
+                    </a>
+                    <h3>Python Data Fundamentals – DataCamp</h3>
                 </div>
 
                 <!-- Udemy AWS -->
                 <div class="cert-card">
-                    <div class="cert-preview">
-                        AWS AI Practitioner
-                    </div>
-                    <h3>Udemy – AWS AI Practitioner</h3>
-                    <a href="https://raw.githubusercontent.com/Maaitah-resume/Portfolio-/main/assets/UC-5c90da11-7dfb-40e6-a9d9-c21d54346ac3.pdf"
-                       class="cert-link" target="_blank">View Certificate</a>
-                </div>
-
-                <!-- Nutanix -->
-                <div class="cert-card">
-                    <div class="cert-preview">
-                        Nutanix Associate 6
-                    </div>
-                    <h3>Nutanix Certified Associate 6</h3>
-                    <a href="https://raw.githubusercontent.com/Maaitah-resume/Portfolio-/main/assets/NutanixCertification20251123-30-pua820.pdf"
-                       class="cert-link" target="_blank">View Certificate</a>
+                    <a href="https://www.udemy.com/certificate/UC-5c90da11-7dfb-40e6-a9d9-c21d54346ac3"
+                       target="_blank">
+                        <img src="https://raw.githubusercontent.com/Maaitah-resume/Portfolio-/main/assets/c2b7bd6e-296b-4562-b428-994bb91765e6.png"
+                             class="cert-thumbnail">
+                    </a>
+                    <h3>AWS AI Practitioner – Udemy</h3>
                 </div>
 
             </div>
