@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad Maaitah - AI & Data Science Portfolio</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,7 +17,7 @@
             margin: auto;
             background: #fff;
             border-radius: 15px;
-            padding-bottom: 40px;
+            padding-bottom: 45px;
         }
         header {
             text-align: center;
@@ -25,8 +26,7 @@
             color: #fff;
         }
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 150px; height: 150px;
             border-radius: 50%;
             border: 4px solid #64ffda;
             object-fit: cover;
@@ -35,31 +35,37 @@
         .subtitle { color: #64ffda; font-size: 1.2em; margin-top: 5px; }
 
         .content { padding: 40px; }
-
         h2 {
             border-left: 5px solid #64ffda;
             padding-left: 12px;
             font-size: 1.9em;
         }
 
-        .section { margin-bottom: 50px; }
+        .section { margin-bottom: 55px; }
 
-        .projects-grid, .cert-grid {
+        .info-box {
+            padding: 20px;
+            background: #f4f7fb;
+            border-left: 5px solid #64ffda;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .projects-grid, .cert-grid, .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-top: 20px;
         }
 
-        .project-card, .cert-card {
+        .project-card, .cert-card, .skill-card {
             background: #f4f7fb;
             padding: 20px;
             border-radius: 12px;
             border: 2px solid #e2e8f0;
             transition: 0.3s;
         }
-
-        .project-card:hover, .cert-card:hover {
+        .project-card:hover, .cert-card:hover, .skill-card:hover {
             transform: translateY(-5px);
             border-color: #64ffda;
         }
@@ -80,10 +86,7 @@
             text-decoration: none;
             font-weight: bold;
         }
-
-        a.button:hover {
-            background: #112240;
-        }
+        a.button:hover { background: #112240; }
 
         footer {
             margin-top: 40px;
@@ -92,9 +95,9 @@
             text-align: center;
             color: #fff;
         }
-
     </style>
 </head>
+
 <body>
 
 <div class="container">
@@ -106,7 +109,8 @@
         <h1>Mohammad Maaitah</h1>
         <p class="subtitle">AI Engineer | Data Scientist | Cloud Practitioner</p>
         <p>
-            <a href="https://www.linkedin.com/in/mohammad-maaitah-2b0351390" class="button" target="_blank">
+            <a href="https://www.linkedin.com/in/mohammad-maaitah-2b0351390"
+               class="button" target="_blank">
                 LinkedIn Profile
             </a>
         </p>
@@ -114,17 +118,90 @@
 
     <div class="content">
 
-        <!-- ABOUT -->
+        <!-- ABOUT ME -->
         <section class="section">
             <h2>About Me</h2>
-            <p style="font-size: 1.1em; line-height: 1.7;">
-                I am an AI Engineer and Data Scientist specialized in deep learning, medical image analysis,
-                and cloud-based AI deployment. I enjoy building intelligent systems such as leukemia segmentation
-                using U-Net, brain tumor classification systems, and machine learning pipelines deployed on modern
-                cloud platforms. Passionate about learning, problem solving, and delivering meaningful solutions
-                using AI technologies.
-            </p>
+            <div class="info-box">
+                <p style="font-size: 1.1em; line-height: 1.8;">
+                    I am an AI Engineer, Data Scientist, and Research Specialist passionate about solving real-world
+                    challenges with intelligent machine learning systems. My work focuses on deep learning, medical image
+                    analysis, cloud-based deployment, research-driven development, and model optimization.
+
+                    <br><br>
+                    I have hands-on experience building advanced solutions, including leukemia cell segmentation using
+                    U-Net, MRI-based brain tumor classification, and scalable cloud AI systems. I enjoy transforming research
+                    concepts into deployable applications and continuously expanding my expertise in federated learning,
+                    cybersecurity AI, and distributed model training.
+
+                    <br><br>
+                    Currently studying Artificial Intelligence & Data Science at
+                    <strong>Hussein Technical University (HTU)</strong> — where I strengthen both my academic foundation
+                    and practical engineering experience.
+                </p>
+            </div>
         </section>
+
+        <!-- SKILLS -->
+        <section class="section">
+            <h2>Skills Summary</h2>
+
+            <div class="skills-grid">
+                
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <p>Python, Java, SQL</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Frameworks</h3>
+                    <p>Pandas, PyTorch, NumPy, Scikit-learn, Matplotlib, Seaborn, Docker</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <p>Excel, Power BI, Jira, Postman, AWS, Nutanix</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Platforms</h3>
+                    <p>PyCharm, Jupyter Notebook, VS Code</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Research Skills</h3>
+                    <p>Scientific Research, AI Experimentation, Data Modeling, Problem Framing</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Soft Skills</h3>
+                    <p>Project Management, Report Building, Leadership, Communication, Stakeholder Collaboration</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- UPCOMING PROJECTS -->
+        <section class="section">
+            <h2>Upcoming Project</h2>
+
+            <div class="info-box" style="background:#eef6ff;">
+                <h3 style="color:#0a192f;">Federated Learning-Based Intrusion Detection System (FD-IDS)</h3>
+                <p style="font-size:1.1em; line-height:1.7;">
+                    A cutting-edge cybersecurity research project combining <strong>federated learning</strong> with
+                    <strong>intrusion detection</strong> to create a decentralized, privacy-preserving defense system.
+
+                    <br><br>
+                    The system enables multiple organizations to collaboratively train an AI model without sharing raw data —
+                    strengthening security, eliminating privacy concerns, and improving global threat detection.
+
+                    <br><br>
+                    Built using:
+                    <strong>PyTorch Federated Framework, Secure Aggregation, Feature Engineering, Network Traffic Analysis</strong>.
+                </p>
+            </div>
+        </section>
+
 
         <!-- PROJECTS -->
         <section class="section">
@@ -142,11 +219,10 @@
 
                 <div class="project-card">
                     <h3>Brain Tumor Classification</h3>
-                    <p>ML model for MRI-based tumor classification developed using CNNs.</p>
+                    <p>ML system for MRI-based tumor classification using CNNs.</p>
                     <a class="button" href="https://www.kaggle.com/code/mohammadmaaitah5/notebookbe584930f4"
                        target="_blank">Open Project →</a>
                 </div>
-
             </div>
         </section>
 
@@ -158,8 +234,7 @@
 
                 <!-- Nutanix -->
                 <div class="cert-card">
-                    <a href="https://www.credly.com/badges/afeccbb1-f71a-4e97-aa09-3896fa0599f3/public_url"
-                       target="_blank">
+                    <a href="https://www.credly.com/badges/afeccbb1-f71a-4e97-aa09-3896fa0599f3/public_url" target="_blank">
                         <img src="https://raw.githubusercontent.com/Maaitah-resume/Portfolio-/main/assets/c383558e-a4f4-482a-a0a2-a7f74a4f62a0.png"
                              class="cert-thumbnail">
                     </a>
@@ -178,14 +253,25 @@
 
                 <!-- Udemy AWS -->
                 <div class="cert-card">
-                    <a href="https://www.udemy.com/certificate/UC-5c90da11-7dfb-40e6-a9d9-c21d54346ac3"
-                       target="_blank">
+                    <a href="https://www.udemy.com/certificate/UC-5c90da11-7dfb-40e6-a9d9-c21d54346ac3" target="_blank">
                         <img src="https://raw.githubusercontent.com/Maaitah-resume/Portfolio-/main/assets/c2b7bd6e-296b-4562-b428-994bb91765e6.png"
                              class="cert-thumbnail">
                     </a>
                     <h3>AWS AI Practitioner – Udemy</h3>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section">
+            <h2>Contact</h2>
+            <div class="info-box">
+                <p style="font-size: 1.2em; line-height: 1.7;">
+                    <strong>Email:</strong> maaitah2004@gmail.com <br>
+                    <strong>Phone:</strong> +962 79 214 8465 <br>
+                    <strong>Location:</strong> Jordan
+                </p>
             </div>
         </section>
 
