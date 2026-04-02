@@ -32,7 +32,7 @@ export default function Footer() {
             </a>
           </div>
           <p className="text-text-secondary text-xs font-medium uppercase tracking-widest">
-            © {currentYear} Mohammad Maaitah. All rights reserved.
+            © {currentYear} Mohammad Maaitah.
           </p>
         </div>
       </div>
