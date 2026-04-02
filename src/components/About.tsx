@@ -17,7 +17,7 @@ export default function About() {
           viewport={{ once: true }}
           className="flex flex-col lg:flex-row items-center gap-12"
         >
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/)2">
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full glass mb-4">
               <User size={14} className="text-primary" />
               <span className="text-xs font-bold uppercase tracking-widest text-primary">About Me</span>
