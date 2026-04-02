@@ -52,7 +52,7 @@ export default function About() {
           <div className="lg:w-1/2 relative">
             <div className="aspect-square rounded-3xl overflow-hidden glass p-2">
               <img
-                src="/profile.jpg" 
+                src="profile.jpg" 
                 alt="Mohammad Maaitah" 
                 className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-all duration-700"
                 referrerPolicy="no-referrer"
