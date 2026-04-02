@@ -17,7 +17,7 @@ export default function About() {
           viewport={{ once: true }}
           className="flex flex-col lg:flex-row items-center gap-12"
         >
-          <div className="lg:w-1/)2">
+          <div className="lg:w-2/5">
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full glass mb-4">
               <User size={14} className="text-primary" />
               <span className="text-xs font-bold uppercase tracking-widest text-primary">About Me</span>
@@ -49,8 +49,8 @@ export default function About() {
             </div>
           </div>
           
-          <div className="lg:w-1/2 relative">
-            <div className="aspect-square rounded-3xl overflow-hidden glass p-2">
+          <div className="lg:w-3/5 relative flex justify-center">
+            <div className="aspect-square rounded-3xl overflow-hidden glass p-2 lg:w-[380px] lg:h-[380px] w-[300px] h-[300px]">
               <img
                 src="profile.jpg" 
                 alt="Mohammad Maaitah" 
