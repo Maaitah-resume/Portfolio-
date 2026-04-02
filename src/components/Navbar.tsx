@@ -17,7 +17,7 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 glass h-16 flex items-center justify-between px-6 md:px-12"
     >
       <div className="text-xl font-bold tracking-tighter">
-        <span className="text-primary">M</span>.Maaitah
+        <span className="text-primary">Mohammad</span> Maaitah
       </div>
       
       <div className="hidden md:flex items-center space-x-8">
@@ -33,10 +33,19 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center space-x-4">
-        <a href="https://www.linkedin.com/in/mohammad-maaitah-2b0351390" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary transition-colors">
-          <Linkedin size={20} />
+        <a
+          href="https://www.linkedin.com/in/mohammad-maaitah-2b0351390"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+          aria-label="LinkedIn"
+        >
+          <Linkedin size={22} />
         </a>
-        <a href="mailto:maaitah2004@gmail.com" className="text-text-secondary hover:text-primary transition-colors">
+        <a
+          href="mailto:maaitah2004@gmail.com"
+          className="flex items-center p-2 rounded-lg text-text-secondary hover:text-primary hover:bg-white/5 transition-colors"
+        >
           <Mail size={20} />
         </a>
       </div>

@@ -50,11 +50,11 @@ export default function About() {
           </div>
           
           <div className="lg:w-3/5 relative flex justify-center">
-            <div className="aspect-square rounded-3xl overflow-hidden glass p-2 lg:w-[380px] lg:h-[380px] w-[300px] h-[300px]">
+            <div className="rounded-3xl overflow-hidden glass p-2 lg:w-[420px] lg:h-[560px] w-[300px] h-[420px] flex items-center justify-center">
               <img
-                src="profile.jpg" 
-                alt="Mohammad Maaitah" 
-                className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-all duration-700"
+                src="profile.jpg"
+                alt="Mohammad Maaitah"
+                className="w-full h-full object-contain rounded-2xl transition-all duration-700"
                 referrerPolicy="no-referrer"
               />
             </div>
